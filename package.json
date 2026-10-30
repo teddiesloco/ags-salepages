@@ -1,7 +1,7 @@
 {
   "name": "ags-salepages",
   "version": "1.0.0",
-  "description": "AgentSea AGS-Salepages — Bộ Cỗ Máy AI Phỏng Vấn Offer, Viết VSL & Dựng Trang Bán Hàng Đa Ngành Việt Nam (Trích xuất từ ABS OS KIT)",
+  "description": "AgentSea AGS-Salepages — Bộ Skill & Template Xây Dựng Website, Landing Page, Trang Bán Hàng & Dịch Vụ Đa Ngành Việt Nam (Gắn sẵn VietQR SePay, Google Sheets & Zalo)",
   "type": "module",
   "main": "src/salepage_engine.js",
   "bin": {

@@ -1,32 +1,30 @@
-# 🚀 AGS-Salepages — Cỗ Máy AI Phỏng Vấn Offer, Viết VSL & Dựng Trang Bán Hàng Đa Ngành Việt Nam
+# 🚀 AGS-Salepages — Bộ Skill & Template Xây Dựng Website, Landing Page & Trang Bán Hàng Đa Ngành Việt Nam
 
-> **Một phần tinh hoa trích xuất từ hệ điều hành kinh doanh [Agent Business System OS (ABS OS KIT)](https://agentsea.vn)**  
+> **Trích xuất từ bộ công cụ kinh doanh thực chiến [Agent Business System OS (ABS OS KIT)](https://agentsea.vn)**  
 > **Phát triển bởi:** **AgentSea (`agentsea.vn`)** · **Canary ID:** `CANARY-AGS-SALEPAGES-V1`
 
-Bạn mở Claude Code, Antigravity, Cursor hay Codex lên bảo *"làm cho tôi cái landing page"* và nhận về một trang web nền tím nhợt nhạt, chữ viết sáo rỗng kiểu dịch máy, không có nổi một nút quét mã VietQR hay luồng chốt đơn thực tế?
+### ❌ Vấn đề khi bạn tự bảo AI làm trang web bán hàng:
+- Giao diện nhìn một màu "mùi AI" (nền tím nhạt, font chữ lỗi dấu tiếng Việt, bố cục rời rạc không giống trang bán hàng thật).
+- Chữ viết chung chung, sáo rỗng, khách đọc xong không hiểu bạn bán gì và tại sao phải mua ngay.
+- Không có luồng thu tiền thực tế tại Việt Nam: thiếu mã quét **VietQR**, không nối được **Google Sheets** quản lý đơn, thiếu nút đẩy khách về **Zalo** chốt sale.
 
-**`ags-salepages`** giải quyết triệt để vấn đề đó. Đây không chỉ là một kho giao diện tĩnh, mà là **một Giám đốc Chuyển đổi & Thiết kế AI được đóng gói sẵn**: Bạn chỉ cần bỏ thư mục này vào bất kỳ AI Coding Agent nào, AI sẽ **tự động phỏng vấn ngược bạn 4 câu hỏi**, tư vấn **Offer Không Thể Chối Từ (công thức Alex Hormozi)**, viết sẵn **Kịch bản Video Bán Hàng (VSL)** và xuất ra trang bán hàng hoàn chỉnh chuẩn tâm lý mua hàng của người Việt!
-
----
-
-## ✨ 4 Vũ Khí Hạng Nặng Bên Trong `ags-salepages`
+### ✅ Kết quả bạn nhận được ngay với `ags-salepages`:
+Chỉ cần mở bộ repo này bằng **Antigravity, Claude Code, Cursor hoặc Codex**, bạn có ngay một trang web hoàn chỉnh để gửi link cho khách trong 5 phút:
 
 ```mermaid
 flowchart LR
-  U["Bạn mở repo bằng<br/>Antigravity / Claude Code / Codex"] --> I["AI Phỏng Vấn 4 Câu<br/>(Sản phẩm, Nỗi đau, Kiến trúc, Cổng thu tiền)"]
-  I --> O["Tối Ưu Offer Hormozi<br/>+ Chọn Kiến Trúc Phù Hợp (Text / Booking / Ticketing / VSL)"]
-  O --> P["Xuất Trang HTML/Tailwind Sắc Nét<br/>+ VietQR SePay + Google Sheets + Zalo CTA"]
+  U["1. Mở repo bằng AI Agent<br/>(Antigravity / Claude / Cursor / Codex)"] --> O["2. Chọn đúng mẫu theo ngành<br/>(Bán hàng / Dịch vụ / Bán vé / Giới thiệu)"]
+  O --> P["3. Ra ngay Website hoàn chỉnh<br/>(Chuẩn tiếng Việt + VietQR SePay + Google Sheets + Zalo)"]
 ```
 
-1. **AI Tự Động Phỏng Vấn & Đóng Gói Offer Không Thể Chối Từ:**
-   - Không cần biết viết prompt dài dòng. AI tự hỏi bạn từng bước để đóng gói sản phẩm chính + quà tặng kèm + cam kết đảo ngược rủi ro + xử lý 3 lời từ chối phổ biến nhất của khách.
-2. **6 Kiến Trúc Trang Bán Hàng Thực Chiến (Kèm 24 Route Gốc của ABS OS):**
-   - Từ **Hệ thống bán vé giải chạy bộ / sự kiện 0% phí sàn (Landing Page + Google Sheets + SePay VietQR cấp mã BIB tự động)**, đến **Trang Video Bán Hàng (VSL)**, **Thư bán hàng chữ dài (Long-form 8 khối)**, **Trang Đặt lịch Spa/Nha khoa/Resort**, **Trang Flash Sale E-commerce**, và **Showroom/Portfolio thu Lead**.
-3. **Chuẩn Thẩm Mỹ AgentSea (Zero AI-Slop):**
-   - Tuyệt đối không dùng màu tím AI (`#6366f1`) hay font `Inter` nhàm chán. Sử dụng bộ 3 font chuẩn dấu tiếng Việt (`Bricolage Grotesque`, `Be Vietnam Pro`, `JetBrains Mono`) và hệ màu tương phản cao (`Paper #f4f4ef`, `Ink #0e1116`, `Signal Green #1f6f3d`, `Neon #a8ff3e`).
-4. **Tích Hợp Sẵn Luồng Tiền & Quản Lý Đơn Hàng 0 Đồng Chi Phí Server:**
-   - Nhúng sẵn bộ tạo mã **VietQR động**, nút mở thẳng **Zalo cá nhân / Zalo OA**, và toàn bộ mã nguồn **Google Apps Script (`google-apps-script-sepay.gs`)** để khách chuyển khoản xong là tự động nhảy trạng thái *"Đã thanh toán"* trong Google Sheets và gửi vé QR qua Email!
-
+1. **Đa dạng mẫu trang cho mọi nhu cầu kinh doanh tại Việt Nam:**
+   - Làm **trang bán sản phẩm vật lý (COD / Flash Sale)**, **trang đặt lịch dịch vụ (Spa, Nha khoa, Phòng khám, Resort)**, **trang bán vé sự kiện / giải chạy bộ 0đ phí sàn**, **trang bán khóa học / phần mềm**, đến **trang giới thiệu doanh nghiệp, Showroom & thu thập thông tin khách hàng (Lead)**.
+2. **Giao diện đẹp, sạch, chuẩn thẩm mỹ thương mại (Zero AI-Slop):**
+   - Cấm tuyệt đối màu tím AI (`#6366f1`) và font lỗi dấu. Dùng sẵn bộ 3 font tiếng Việt sắc nét (`Bricolage Grotesque`, `Be Vietnam Pro`, `JetBrains Mono`) và hệ màu tương phản cao giúp khách dễ đọc trên điện thoại.
+3. **Nội dung viết thẳng vào vấn đề của người mua:**
+   - Sắp xếp sẵn bố cục thuyết phục khách hàng: Nêu đúng kết quả khách cần $\rightarrow$ Chạm đúng nỗi đau thực tế $\rightarrow$ Đưa ra gói ưu đãi & quà tặng hấp dẫn $\rightarrow$ Giải đáp sẵn các câu khách hay lăn tăn về giá $\rightarrow$ Kêu gọi hành động rõ ràng.
+4. **Thu tiền & Quản lý khách hàng tự động (0 đồng chi phí thuê server):**
+   - Tích hợp sẵn mã **VietQR tự động theo đơn**, nút bấm mở thẳng **Zalo tư vấn**, và file script nối **Google Sheets + SePay** để khách chuyển khoản xong là tự động nhảy trạng thái *"Đã thanh toán"* và gửi vé/xác nhận qua Email!
 ---
 
 ## 📦 Danh Mục 6 Bộ Template Thực Chiến Có Sẵn (`templates/`)
@@ -51,11 +49,11 @@ flowchart LR
   npm run wizard
   ```
 
-### Bước 2: Gõ 1 câu duy nhất để AI bắt đầu phỏng vấn bạn
-Hãy gõ vào khung chat của AI:
-> **"Hãy đọc file `HUONG-DAN-CHO-TRO-LY-AI.md` và phỏng vấn tôi để làm một trang bán hàng chuyển đổi cao."**
+### Bước 2: Nhắn yêu cầu của bạn cho AI
+Chỉ cần gõ vào khung chat của AI sản phẩm bạn đang bán, hoặc gõ:
+> **"Đọc `HUONG-DAN-CHO-TRO-LY-AI.md` và dựng giúp tôi một trang bán hàng / giới thiệu dịch vụ cho [tên sản phẩm/dịch vụ của bạn]."**
 
-AI sẽ hỏi bạn 4 câu cực dễ hiểu (Bạn bán gì? Khách sợ gì? Thích kiểu trang nào? Nhận tiền qua đâu?), sau đó tự động phân tích Offer, viết kịch bản video và xuất ra file web hoàn chỉnh cho bạn!
+AI sẽ chọn đúng mẫu trang hợp nhất với ngành của bạn, hỏi thêm vài thông tin cơ bản (giá bán, quyền lợi khách nhận được, số tài khoản VietQR / số Zalo) rồi xuất ngay ra trang web hoàn chỉnh!
 
 ### Bước 3: Kiểm tra & Đưa lên mạng miễn phí
 - Mở trực tiếp file `.html` vừa tạo bằng trình duyệt (Chrome/Safari) để xem ngay.

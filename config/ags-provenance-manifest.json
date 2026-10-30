@@ -10,8 +10,8 @@
     "HUONG-DAN-CHO-TRO-LY-AI.md": "58681050734a4b1c070c49a5297e8cedc5beace9cb0fd6575c22669f95d52c3b",
     "LICENSE": "b8858cdf586d8a88c49cde43526c6de9b87deb6a93b488f649c93ef7b60f81c3",
     "NOTICE": "98a551ca27bbc5767f21cc36a327f5f570551b73824c0f057952a84a63328073",
-    "README.md": "6c8b566e07d1931e92116bc37a9c3a1aa141a9e862ed8aa9e1fc5194519d7490",
-    "package.json": "978984e280f81332e205494ee88ef2af8d4dd1bf326995bd75289c9db06c84ef",
+    "README.md": "5e9f8017a4b7534f5cf403108d973888bc94fcd3936cd275fe9a29c982536559",
+    "package.json": "97aef15de29ca79c7afed2f3dfcc280af476d6df095ce0c79c1e14a9320233fc",
     "public/ags-tokens.css": "7a3de69254b73fa1693f6a88a312422dd0aae8bbe2c4c66c71d23a6d93e4127d",
     "public/icons/agentsea-mark.svg": "b62c70da7b2a033d39d184340993a18a060215d699a96d0a53b303f00229a2a5",
     "public/icons/icon-192.png": "ec188095b6e3ab3bb731490cb9e1ab70cf1deae05db3816b86aeaee396d9566b",
@@ -27,5 +27,5 @@
     "templates/05-ecom-flash-sale-cod/index.html": "12366f5c8a6471e70b7553b5d3b434c535a76d44713de018b2b7aa0999b5292e",
     "templates/06-showroom-portfolio-lead/index.html": "5d3e654b604b75b59fff2e5efdb7afce6115250ac9a17ee3975bd984240f66c2"
   },
-  "manifest_sha256": "9a6aeaf599aebe7d0290d9c764a3332af48b010e74ff8ede8c5d687a21af0f44"
+  "manifest_sha256": "31174e63c5453d28159ce24d87c4c32cb0ecb106a360841fd2d4c1b11a84eafe"
 }
