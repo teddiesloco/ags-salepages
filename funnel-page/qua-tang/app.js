@@ -71,11 +71,11 @@
     }
 
     var count = data.referral_count || 0;
-    var isUnlocked = !!data.level2_unlocked || count >= 2;
+    var isUnlocked = !!data.level2_unlocked || count >= 3;
     var scoreEl = document.getElementById('refScoreText');
-    if(scoreEl) scoreEl.innerText = Math.min(count, 2) + '/2 BẠN NHẬN QUÀ';
+    if(scoreEl) scoreEl.innerText = Math.min(count, 3) + '/3 BẠN NHẬN QUÀ';
 
-    var pct = Math.min((count / 2) * 100, 100);
+    var pct = Math.min((count / 3) * 100, 100);
     var fillEl = document.getElementById('refProgressFill');
     if(fillEl) fillEl.style.width = pct + '%';
 
@@ -85,18 +85,18 @@
     if(isUnlocked) {
       clearInterval(pollTimer);
       if(hintText) {
-        hintText.innerHTML = '🎉 <strong>Đã đủ 2/2 bạn nhận quà!</strong> Hệ thống đã mở khóa và gửi trọn bộ <strong>AGS-Zalo-Bot (trị giá 5.525.000đ)</strong> về hộp thư của bạn!';
+        hintText.innerHTML = '🎉 <strong>Đã đủ 3/3 bạn nhận quà!</strong> Hệ thống đã mở khóa và gửi trọn bộ <strong>Đại Kho Tài Sản VIP (trị giá 9.869.000đ gồm AGS-Zalo-Bot &amp; AGS-Business-KIT)</strong> về hộp thư của bạn!';
       }
       if(bumpBox) {
         bumpBox.innerHTML =
           '<div>' +
           '<span class="bump-tag" style="background:var(--signal);">✓ ĐÃ MỞ KHÓA 0 ĐỒNG</span>' +
-          '<h3 style="font-size:19px;margin-bottom:8px;">Chúc mừng! Trợ Lý AGS-Zalo-Bot (5.525.000đ) Của Bạn Đã Mở Khóa!</h3>' +
-          '<p style="font-size:14px;color:var(--ink-2);margin-bottom:14px;">Bạn đã hoàn thành điều kiện mời 2 người bạn. Hãy kiểm tra hộp thư đã xác thực của bạn để tải trọn bộ <strong>AGS-Zalo-Bot (Trợ Lý Zalo AI Tiếp Khách 24/7 &amp; Báo Cáo 1-Click)</strong>!</p>' +
+          '<h3 style="font-size:19px;margin-bottom:8px;">Chúc mừng! Đại Kho Tài Sản VIP (9.869.000đ) Của Bạn Đã Mở Khóa!</h3>' +
+          '<p style="font-size:14px;color:var(--ink-2);margin-bottom:14px;">Bạn đã hoàn thành điều kiện mời 3 người bạn. Hãy kiểm tra hộp thư đã xác thực của bạn để tải trọn bộ <strong>Đại Kho Tài Sản VIP (AGS-Zalo-Bot Tiếp Khách 24/7 &amp; AGS-Business-KIT 5 Trợ Lý AI + 12 Kỹ Năng)</strong>!</p>' +
           '</div>';
       }
     } else if(hintText && count > 0) {
-      hintText.innerHTML = '⚡ Tuyệt vời! Đã có <strong>' + count + '/2 người bạn</strong> đăng ký qua link của bạn. Chỉ còn <strong>' + (2 - count) + ' người bạn</strong> nữa là bạn nhận trọn bộ <strong>AGS-Zalo-Bot (5.525.000đ) hoàn toàn 0 đồng</strong>!';
+      hintText.innerHTML = '⚡ Tuyệt vời! Đã có <strong>' + count + '/3 người bạn</strong> đăng ký qua link của bạn. Chỉ còn <strong>' + (3 - count) + ' người bạn</strong> nữa là bạn nhận trọn bộ <strong>Đại Kho Tài Sản VIP (9.869.000đ) hoàn toàn 0 đồng</strong>!';
     }
   }
 
