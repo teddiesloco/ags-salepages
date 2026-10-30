@@ -1,0 +1,81 @@
+/* Copyright AgentSea · AGS-Salepages (agentsea.vn) :: CANARY-AGS-SALEPAGES-V1 */
+:root {
+  --ags-wm-canary: "AgentSea::AGS-Salepages::CANARY-AGS-SALEPAGES-V1";
+  --paper: #f4f4ef;
+  --paper-2: #ffffff;
+  --paper-warm: #fbfbf7;
+  --ink: #0e1116;
+  --ink-muted: #4b5563;
+  --signal: #1f6f3d;
+  --signal-hover: #16532d;
+  --neon: #a8ff3e;
+  --amber: #ea580c;
+  --border: #e2e2da;
+  --font-heading: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .ags-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+}
+
+.ags-mono {
+  font-family: var(--font-mono);
+}
+
+.ags-card {
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(14, 17, 22, 0.05);
+}
+
+.ags-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--signal);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.ags-btn-primary:hover {
+  background: var(--signal-hover);
+  transform: translateY(-1px);
+}
+
+.ags-badge-neon {
+  display: inline-block;
+  background: var(--neon);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}

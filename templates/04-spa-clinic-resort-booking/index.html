@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>An Lâm Wellness &amp; Spa — Đặt Lịch Liệu Trình &amp; Nghỉ Dưỡng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ags-wm-canary: "AgentSea::AGS-Salepages::CANARY-AGS-SALEPAGES-V1";
+      --paper: #fbfbf7;
+      --paper-2: #ffffff;
+      --ink: #0e1116;
+      --ink-muted: #52525b;
+      --signal: #1f6f3d;
+      --neon: #a8ff3e;
+      --border: #e4e4dc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--paper); color: var(--ink); font-family: 'Be Vietnam Pro', sans-serif; line-height: 1.65; }
+    h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; line-height: 1.18; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .container { max-width: 1060px; margin: 0 auto; padding: 48px 20px; }
+    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+    .pkg-card { background: var(--paper-2); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-bottom: 14px; }
+    .booking-box { background: var(--paper-2); border: 2px solid var(--signal); border-radius: 20px; padding: 28px; }
+    .input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 10px; margin: 6px 0 14px; font-family: inherit; }
+    .btn { width: 100%; background: var(--signal); color: #fff; padding: 15px; border: none; border-radius: 12px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 17px; font-weight: 700; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <span class="mono" style="font-size: 12px; font-weight: 700; color: var(--signal);">WARM EDITORIAL · SPA &amp; CLINIC &amp; RESORT</span>
+        <h1 style="font-size: 40px; margin: 12px 0 16px;">Tái Tạo Năng Lượng &amp; Chăm Sóc Chuyên Sâu Trong Không Gian Riêng Tư Tuyệt Đối</h1>
+        <p style="color: var(--ink-muted); margin-bottom: 24px;">
+          Chọn liệu trình hoặc hạng phòng bên dưới và đặt trước khung giờ. Đội ngũ chuyên gia sẽ chuẩn bị sẵn phòng riêng trước 15 phút khi bạn đến.
+        </p>
+
+        <div class="pkg-card">
+          <h3>Liệu Trình 01: Trị Liệu Cổ Vai Gáy &amp; Đá Nóng (90 Phút)</h3>
+          <p class="mono" style="color: var(--signal); font-weight: 700; margin: 4px 0;">490.000đ / buổi (Giá gốc 750.000đ)</p>
+          <p style="font-size: 14px; color: var(--ink-muted);">Giải tỏa căng cơ sâu cho dân văn phòng, tặng kèm ngâm chân thảo dược vùng cao.</p>
+        </div>
+
+        <div class="pkg-card">
+          <h3>Liệu Trình 02: Chăm Sóc Da Chuyên Sâu Chuẩn Y Khoa (75 Phút)</h3>
+          <p class="mono" style="color: var(--signal); font-weight: 700; margin: 4px 0;">690.000đ / buổi</p>
+          <p style="font-size: 14px; color: var(--ink-muted);">Soi da 1-1 cùng chuyên gia, phục hồi hàng rào độ ẩm tức thì.</p>
+        </div>
+      </div>
+
+      <div class="booking-box">
+        <h2 style="font-size: 24px; margin-bottom: 14px;">Đặt Lịch Giữ Chỗ Trước</h2>
+        <form onsubmit="event.preventDefault(); alert('Đã ghi nhận lịch hẹn! Chúng tôi sẽ nhắn Zalo xác nhận ngay.');">
+          <label>Họ và tên quý khách *</label>
+          <input class="input" type="text" placeholder="Chị Lan Anh" required />
+          <label>Số điện thoại Zalo *</label>
+          <input class="input" type="tel" placeholder="0909xxxxxx" required />
+          <label>Chọn liệu trình / Hạng phòng</label>
+          <select class="input">
+            <option>Liệu trình 01 — Trị liệu Cổ Vai Gáy (490.000đ)</option>
+            <option>Liệu trình 02 — Chăm sóc da Y khoa (690.000đ)</option>
+          </select>
+          <label>Ngày &amp; Giờ mong muốn *</label>
+          <input class="input" type="datetime-local" required />
+          <button type="submit" class="btn">Xác Nhận Giữ Chỗ &amp; Nhận Ưu Đãi →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+⁠​‌​​​​​‌​‌​​​‌‌‌​‌​‌​​‌‌​​‌​‌‌​‌​‌​‌​‌‌‌​‌​​‌‌​‌​​‌‌‌​‌​​‌‌​​​​‌​‌‌​​‌‌‌​‌‌​​‌​‌​‌‌​‌‌‌​​‌‌‌​‌​​​‌‌‌​​‌‌​‌‌​​‌​‌​‌‌​​​​‌​​‌​‌‌‌​​‌‌‌​‌‌​​‌‌​‌‌‌​​​‌‌‌​‌​​‌​​​​‌‌​‌​​​​​‌​‌​​‌‌‌​​‌​​​​​‌​‌​‌​​‌​​‌​‌‌​​‌​​‌​‌‌​‌​‌​​​​​‌​‌​​​‌‌‌​‌​‌​​‌‌​​‌​‌‌​‌​‌​‌​​‌‌​‌​​​​​‌​‌​​‌‌​​​‌​​​‌​‌​‌​‌​​​​​‌​​​​​‌​‌​​​‌‌‌​‌​​​‌​‌​‌​‌​​‌‌​​‌​‌‌​‌​‌​‌​‌‌​​​‌‌​​​‌⁠

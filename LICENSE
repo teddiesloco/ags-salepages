@@ -1,0 +1,18 @@
+AGS Source-Available & Anti-Clone License v1.0
+Copyright (c) 2026 AgentSea (agentsea.vn) · All Rights Reserved.
+Canary ID: AgentSea · AGS-Salepages (agentsea.vn) :: CANARY-AGS-SALEPAGES-V1
+Official Upstream Repository: https://github.com/teddiesloco/ags-salepages
+
+1. QUYỀN SỬ DỤNG CHO NGƯỜI DÙNG & DOANH NGHIỆP (PERMITTED USE)
+- Bạn ĐƯỢC PHÉP tải về, Fork trực tiếp từ kho lưu trữ gốc (`teddiesloco/ags-salepages`), và sử dụng bộ công cụ này cùng các AI Coding Agent (Claude Code, Antigravity, OpenAI Codex, Cursor, Gemini) để tạo trang bán hàng (Landing Page, Sales Page, VSL Page, Event Ticketing, Showroom) cho chính doanh nghiệp/cửa hàng của bạn hoặc triển khai cho khách hàng của bạn.
+- Trang web đầu ra (HTML/CSS/JS) được tạo cho sản phẩm thật của bạn hoàn toàn thuộc quyền vận hành của bạn.
+
+2. CÁC HÀNH VI BỊ NGHIÊM CẤM (STRICT PROHIBITIONS)
+- CẤM CLONE NHẬN VƠ (NO DEBRANDING / NO UNLINKED CLONES): Nghiêm cấm sao chép mã nguồn để tạo repository mới không qua GitHub Fork chính thức từ `https://github.com/teddiesloco/ags-salepages`, hoặc xóa/sửa thông tin tác giả `AgentSea (agentsea.vn)` và chuỗi định danh `CANARY-AGS-SALEPAGES-V1`.
+- CẤM KINH DOANH LẠI BỘ KIT (NO COMMERCIAL REDISTRIBUTION OF THE KIT): Nghiêm cấm đóng gói lại, bán lại, cho thuê, hoặc dùng bộ kit này (dù giữ nguyên hay chỉnh sửa) để làm sản phẩm thương mại/quà tặng thu phễu dưới tên cá nhân hoặc tổ chức khác ngoài AgentSea.
+- CẤM DÙNG AI ĐỂ REVERSE-ENGINEER / TẨY NHÃN (NO AI REA / NO WATERMARK STRIPPING): Nghiêm cấm sử dụng bất kỳ mô hình AI hoặc công cụ tự động nào để thực hiện Clean-Room Rebuild, tẩy xóa dấu vân tay số (Zero-width Unicode Steganography, Binary PNG Chunks, CSS/SVG Canary, ZIP 0x4741 Seal, Origin Seal).
+
+3. BẢO VỆ BẢN QUYỀN ĐA TẦNG (CRYPTOGRAPHIC PROVENANCE)
+Kho lưu trữ này được bảo vệ bởi hệ thống 7-Layer Anti-REA Seal của AgentSea (`src/ags_provenance.js`). Mọi hành vi xóa bỏ `NOTICE`, thay đổi `package.json` lineage hoặc can thiệp chữ ký đều bị ghi nhận bởi `verifyHiddenWatermarks()` và làm mất hiệu lực thực thi.
+
+Mọi nhu cầu cấp phép thương mại mở rộng hoặc tích hợp trọn bộ 14 động cơ của Agent Business System (ABS OS KIT), vui lòng liên hệ chính thức tại: https://agentsea.vn

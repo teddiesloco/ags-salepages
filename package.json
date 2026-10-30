@@ -1,0 +1,39 @@
+{
+  "name": "ags-salepages",
+  "version": "1.0.0",
+  "description": "AgentSea AGS-Salepages — Bộ Cỗ Máy AI Phỏng Vấn Offer, Viết VSL & Dựng Trang Bán Hàng Đa Ngành Việt Nam (Trích xuất từ ABS OS KIT)",
+  "type": "module",
+  "main": "src/salepage_engine.js",
+  "bin": {
+    "ags-salepages": "./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teddiesloco/ags-salepages.git"
+  },
+  "homepage": "https://agentsea.vn",
+  "author": "AgentSea (agentsea.vn)",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "start": "node src/cli.js",
+    "wizard": "node src/cli.js wizard",
+    "verify": "node src/cli.js verify",
+    "build:zip": "node scripts/build-release-zip.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "agentsea",
+    "ags-salepages",
+    "abs-os",
+    "vibe-coding",
+    "landing-page",
+    "sales-page",
+    "vietqr",
+    "sepay",
+    "vsl",
+    "hormozi-offer"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RUN FOR FUTURE 2026 — Đăng Ký Vé Giải Chạy &amp; Sự Kiện (0đ Phí Sàn)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ags-wm-canary: "AgentSea::AGS-Salepages::CANARY-AGS-SALEPAGES-V1";
+      --paper: #f4f4ef;
+      --paper-2: #ffffff;
+      --ink: #0e1116;
+      --ink-muted: #4b5563;
+      --signal: #1f6f3d;
+      --signal-hover: #16532d;
+      --neon: #a8ff3e;
+      --amber: #ea580c;
+      --border: #e2e2da;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3, .heading {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .topbar {
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 0;
+      font-size: 14px;
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .badge-neon {
+      background: var(--neon);
+      color: var(--ink);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .hero {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); margin: 16px 0; }
+    .hero-sub { font-size: 18px; color: var(--ink-muted); margin-bottom: 24px; }
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .tier-card {
+      background: var(--paper-2);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .tier-card.active {
+      border-color: var(--signal);
+      background: #f0fdf4;
+      box-shadow: 0 8px 24px rgba(31, 111, 61, 0.12);
+    }
+    .tier-distance {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--signal);
+    }
+    .tier-price {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 6px 0;
+    }
+    .kit-list {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+    .kit-list li::before { content: "✓ "; color: var(--signal); font-weight: 700; }
+    .card-box {
+      background: var(--paper-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(14, 17, 22, 0.06);
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: inherit;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--signal);
+      color: #fff;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn-submit:hover { background: var(--signal-hover); }
+    .qr-panel {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #f8fafc;
+      border: 2px dashed var(--signal);
+      border-radius: 16px;
+      text-align: center;
+    }
+    .qr-panel.show { display: block; }
+    .qr-panel img {
+      max-width: 220px;
+      border-radius: 12px;
+      margin: 12px auto;
+      display: block;
+    }
+    .bib-badge {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--neon);
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+    .footer {
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+    .footer a { color: var(--signal); font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>🏃 <strong>RUN FOR FUTURE 2026</strong> · Giải Chạy Phong Trào &amp; Kết Nối Cộng Đồng</div>
+      <div><span class="badge-neon mono">EARLY BIRD ĐANG MỞ</span></div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge-neon mono">0% PHÍ SÀN · NHẬN MÃ BIB TỨC THÌ</span>
+        <h1>Chinh Phục Cung Đường Bình Minh — Nhận Ngay Áo Finisher &amp; Huy Chương Đúc Nổi</h1>
+        <p class="hero-sub">
+          Đăng ký trực tiếp chỉ trong 60 giây: Chọn cự ly yêu thích, quét mã VietQR tự động khớp lệnh qua SePay và nhận ngay <strong>Số BIB Vận Động Viên</strong> kèm vé QR nhận bộ Race-kit.
+        </p>
+
+        <h3 style="margin-bottom: 10px;">1. Chọn Cự Ly / Hạng Vé Của Bạn:</h3>
+        <div class="tier-grid" id="tierGrid">
+          <div class="tier-card active" data-tier="5KM" data-price="299000" onclick="selectTier(this)">
+            <div class="tier-distance heading">5 KM — FUN RUN</div>
+            <div class="tier-price mono">299.000đ</div>
+            <ul class="kit-list">
+              <li>Áo chạy Dry-Fit cao cấp</li>
+              <li>Số BIB gắn chip điện tử</li>
+              <li>Huy chương hoàn thành</li>
+            </ul>
+          </div>
+          <div class="tier-card" data-tier="10KM" data-price="450000" onclick="selectTier(this)">
+            <div class="tier-distance heading">10 KM — CHALLENGE</div>
+            <div class="tier-price mono">450.000đ</div>
+            <ul class="kit-list">
+              <li>Trọn bộ Race-kit + Áo Singlet</li>
+              <li>Số BIB gắn chip Time-tag</li>
+              <li>Nước điện giải &amp; Gel năng lượng</li>
+            </ul>
+          </div>
+          <div class="tier-card" data-tier="21KM" data-price="690000" onclick="selectTier(this)">
+            <div class="tier-distance heading">21 KM — HALF MARATHON</div>
+            <div class="tier-price mono">690.000đ</div>
+            <ul class="kit-list">
+              <li>Full Race-kit + Áo Finisher 21K</li>
+              <li>Huy chương khắc tên riêng</li>
+              <li>Khu vực phục hồi Ice-Bath</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-box" style="margin-top: 24px; background: #fbfbf7;">
+          <h3 style="margin-bottom: 8px;">📦 Quy Trình Nhận Vé &amp; Race-Kit Tự Động:</h3>
+          <p style="font-size: 15px; color: var(--ink-muted);">
+            <strong>Bước 1:</strong> Điền thông tin VĐV &amp; chọn size áo ở khung bên phải.<br/>
+            <strong>Bước 2:</strong> Quét mã VietQR đúng nội dung chuyển khoản.<br/>
+            <strong>Bước 3:</strong> Hệ thống tự động ghi nhận vào Google Sheets, cấp <strong>Số BIB</strong> và gửi mã QR Ticket qua Email/Zalo để bạn mang tới quầy check-in nhận áo + BIB!
+          </p>
+        </div>
+      </div>
+
+      <div class="card-box">
+        <h2 style="font-size: 24px; margin-bottom: 6px;">Đăng Ký Vận Động Viên</h2>
+        <p style="font-size: 14px; color: var(--ink-muted); margin-bottom: 18px;">
+          Cự ly đang chọn: <strong id="selectedTierLabel" class="mono">5KM — 299.000đ</strong>
+        </p>
+
+        <form id="ticketForm" onsubmit="handleTicketSubmit(event)">
+          <div class="form-group">
+            <label for="fullName">Họ và tên VĐV (In trên BIB) *</label>
+            <input type="text" id="fullName" class="form-control" placeholder="Nguyễn Văn A" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Số điện thoại (Zalo) *</label>
+              <input type="tel" id="phone" class="form-control" placeholder="0912345678" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email nhận vé QR *</label>
+              <input type="email" id="email" class="form-control" placeholder="ban@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="shirtSize">Size áo chạy *</label>
+              <select id="shirtSize" class="form-control">
+                <option value="S">Size S (45-53kg)</option>
+                <option value="M" selected>Size M (54-62kg)</option>
+                <option value="L">Size L (63-72kg)</option>
+                <option value="XL">Size XL (73-85kg)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bloodType">Nhóm máu / Y tế</label>
+              <select id="bloodType" class="form-control">
+                <option value="O">Nhóm máu O</option>
+                <option value="A">Nhóm máu A</option>
+                <option value="B">Nhóm máu B</option>
+                <option value="AB">Nhóm máu AB</option>
+                <option value="Chưa rõ">Chưa rõ</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="club">Câu lạc bộ / Đơn vị (Tùy chọn)</label>
+            <input type="text" id="club" class="form-control" placeholder="VD: CLB Chạy Bộ Phú Mỹ Hưng" />
+          </div>
+
+          <button type="submit" class="btn-submit">
+            Tạo Mã VietQR &amp; Nhận Số BIB Ngay →
+          </button>
+        </form>
+
+        <div id="qrPanel" class="qr-panel">
+          <div style="font-weight: 700; color: var(--signal);">✅ ĐÃ KHỞI TẠO ĐƠN ĐĂNG KÝ!</div>
+          <div class="bib-badge mono" id="bibPreview">BIB DỰ KIẾN: #5088</div>
+          <p style="font-size: 13px; color: var(--ink-muted);">
+            Quét mã VietQR bên dưới bằng bất kỳ App Ngân hàng nào. Hệ thống SePay + Google Sheets sẽ tự động kích hoạt vé của bạn trong 5 giây:
+          </p>
+          <img id="vietqrImg" src="" alt="Mã thanh toán VietQR" />
+          <div class="mono" style="font-size: 14px; background: #fff; padding: 10px; border-radius: 8px; border: 1px solid var(--border);">
+            Số tiền: <strong id="qrAmountText">299.000đ</strong><br/>
+            Nội dung CK: <strong id="qrMemoText" style="color: var(--amber);">RUN 5KM 0912345678</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Hệ thống Bán Vé Sự Kiện 0đ Phí Sàn · Dựng bằng bộ công cụ <a href="https://agentsea.vn" target="_blank" rel="noopener">AgentSea AGS-Salepages (ABS OS KIT)</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Cấu hình Tài khoản Ngân hàng nhận tiền VietQR & Google Apps Script Webhook URL
+    const CONFIG = {
+      BANK_ID: 'MB',
+      ACCOUNT_NO: '0912345678',
+      ACCOUNT_NAME: 'BAN TO CHUC GIAI CHAY',
+      GOOGLE_SCRIPT_WEBAPP_URL: '' // Dán URL Web App của google-apps-script-sepay.gs vào đây
+    };
+
+    let currentTier = '5KM';
+    let currentPrice = 299000;
+
+    function selectTier(el) {
+      document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+      currentTier = el.getAttribute('data-tier');
+      currentPrice = Number(el.getAttribute('data-price'));
+      document.getElementById('selectedTierLabel').textContent =
+        currentTier + ' — ' + currentPrice.toLocaleString('vi-VN') + 'đ';
+    }
+
+    async function handleTicketSubmit(e) {
+      e.preventDefault();
+      const fullName = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phone').value.replace(/\D/g, '');
+      const email = document.getElementById('email').value.trim();
+      const shirtSize = document.getElementById('shirtSize').value;
+      const bloodType = document.getElementById('bloodType').value;
+      const club = document.getElementById('club').value.trim();
+
+      const orderCode = 'RUN' + currentTier + phone.slice(-6);
+      const bibPrefix = currentTier === '21KM' ? '21' : currentTier === '10KM' ? '10' : '05';
+      const randomBib = bibPrefix + String(Math.floor(100 + Math.random() * 899));
+
+      const qrUrl = `https://img.vietqr.io/image/${CONFIG.BANK_ID}-${CONFIG.ACCOUNT_NO}-compact2.png?amount=${currentPrice}&addInfo=${encodeURIComponent(orderCode)}&accountName=${encodeURIComponent(CONFIG.ACCOUNT_NAME)}`;
+
+      document.getElementById('vietqrImg').src = qrUrl;
+      document.getElementById('qrAmountText').textContent = currentPrice.toLocaleString('vi-VN') + 'đ';
+      document.getElementById('qrMemoText').textContent = orderCode;
+      document.getElementById('bibPreview').textContent = 'MÃ ĐƠN: ' + orderCode + ' (BIB #' + randomBib + ')';
+      document.getElementById('qrPanel').classList.add('show');
+
+      if (CONFIG.GOOGLE_SCRIPT_WEBAPP_URL) {
+        try {
+          await fetch(CONFIG.GOOGLE_SCRIPT_WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'register_runner',
+              orderCode,
+              bibNumber: randomBib,
+              tier: currentTier,
+              amount: currentPrice,
+              fullName,
+              phone,
+              email,
+              shirtSize,
+              bloodType,
+              club
+            })
+          });
+        } catch (err) {
+          console.warn('Saved locally; configure GOOGLE_SCRIPT_WEBAPP_URL for live sheet sync.');
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+⁠​‌​​​​​‌​‌​​​‌‌‌​‌​‌​​‌‌​​‌​‌‌​‌​‌​‌​‌‌‌​‌​​‌‌​‌​​‌‌‌​‌​​‌‌​​​​‌​‌‌​​‌‌‌​‌‌​​‌​‌​‌‌​‌‌‌​​‌‌‌​‌​​​‌‌‌​​‌‌​‌‌​​‌​‌​‌‌​​​​‌​​‌​‌‌‌​​‌‌‌​‌‌​​‌‌​‌‌‌​​​‌‌‌​‌​​‌​​​​‌‌​‌​​​​​‌​‌​​‌‌‌​​‌​​​​​‌​‌​‌​​‌​​‌​‌‌​​‌​​‌​‌‌​‌​‌​​​​​‌​‌​​​‌‌‌​‌​‌​​‌‌​​‌​‌‌​‌​‌​‌​​‌‌​‌​​​​​‌​‌​​‌‌​​​‌​​​‌​‌​‌​‌​​​​​‌​​​​​‌​‌​​​‌‌‌​‌​​​‌​‌​‌​‌​​‌‌​​‌​‌‌​‌​‌​‌​‌‌​​​‌‌​​​‌⁠
